@@ -1,0 +1,83 @@
+//////////////////////////////////////////////////////
+//       Variables       ////       Variables       //
+//////////////////////////////////////////////////////
+
+$background-color: #e6d2aa;
+$secondary-background-color: #42032C;
+
+$primary-text-color: #f1efdc;
+$secondary-text-color: #42032C;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: black;
+  line-height: 1.5;
+  background-color: $background-color;
+}
+
+////////////////////////////////////////////////////////////////////////
+//       Navbar       ////       Navbar       ////       Navbar       //
+////////////////////////////////////////////////////////////////////////
+
+.navbar {
+  background-color: $secondary-background-color;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 4px 0 rgba(66, 3, 44, 0.5);
+}
+
+.nav-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  width: 85vw;
+  max-width: 100vw;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+}
+
+.navbar a {
+  display: inline-block;
+  color: $primary-text-color;
+  font-weight: bold;
+  margin-right: 1.5rem;
+  padding: 0.25rem 0.5rem;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  text-decoration: none;
+  transition: all 0.5s ease;
+}
+
+.link-hover {
+  position: relative;
+
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 3px;
+    transform: scaleX(0);
+    background-color: $primary-text-color;
+
+    transition: transform 0.4s;
+  }
+
+  &:hover:after {
+    transform: scaleX(1);
+  }
+}
