@@ -10,7 +10,7 @@ const List = () => {
       <h1 className="list-title">Cocktails</h1>
       <section className="list-section">
         {data.map((cocktail) => {
-          // Destructure and rename a few different fields.
+          // Destructure
           const {
             idDrink,
             strDrink,
@@ -18,6 +18,7 @@ const List = () => {
             strDrinkThumb,
             strAlcoholic,
           } = cocktail;
+
           return (
             <Card
               key={idDrink}
@@ -28,6 +29,7 @@ const List = () => {
               alcoholic={strAlcoholic}
             />
           );
+          
         })}
       </section>
     </main>
