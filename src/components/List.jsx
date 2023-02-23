@@ -1,9 +1,20 @@
 import { useEffect } from "react";
 import { useGlobalContext } from "../context";
 import Card from "./Card";
+import Loading from "./Loading";
 
 const List = () => {
-  const { data } = useGlobalContext();
+  const { data, loading } = useGlobalContext();
+
+  if (loading) {
+    return <Loading />;
+  }
+
+  if (data.length < 1) {
+    return <h1 className='no-items' >
+      Sorry! No items matched the search criteria.
+    </h1>
+  }
 
   return (
     <main className="cocktails-section">
@@ -29,7 +40,6 @@ const List = () => {
               alcoholic={strAlcoholic}
             />
           );
-          
         })}
       </section>
     </main>

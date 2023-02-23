@@ -11,21 +11,29 @@ const AppProvider = ({ children }) => {
   const [searchTerm, setSearchTerm] = useState("");
 
   const fetchData = async () => {
+    setLoading(true);
     try {
       const response = await axios(`${url}${searchTerm}`);
-      setData(response.data.drinks);
+      const drinks = response.data.drinks;
+      if (drinks) {
+        setData(response.data.drinks);
+      } else {
+        setData([])
+      }
+      setLoading(false);
     } catch (error) {
       console.log(error.response);
+      setLoading(false);
     }
   };
 
   useEffect(() => {
     fetchData();
-  }, [searchTerm,]);
+  }, [searchTerm]);
 
   console.log(data);
   return (
-    <AppContext.Provider value={{ data }}>
+    <AppContext.Provider value={{ data, loading, setSearchTerm }}>
       {children}
     </AppContext.Provider>
   );
