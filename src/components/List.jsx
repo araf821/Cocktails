@@ -27,16 +27,18 @@ const List = () => {
             strCategory,
             strDrinkThumb,
             strAlcoholic,
+
           } = cocktail;
 
           return (
             <Card
-              key={idDrink}
-              id={idDrink}
-              name={strDrink}
-              category={strCategory}
-              img={strDrinkThumb}
-              alcoholic={strAlcoholic}
+              key={cocktail.idDrink}
+              // id={idDrink}
+              // name={strDrink}
+              // category={strCategory}
+              // img={strDrinkThumb}
+              // alcoholic={strAlcoholic}
+              cocktail={cocktail}
             />
           );
         })}

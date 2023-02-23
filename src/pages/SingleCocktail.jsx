@@ -1,6 +1,13 @@
 const SingleCocktail = () => {
   return (
-    <div>SingleCocktail</div>
+    <section className="cocktail-page">
+      <div className="img-container">
+    
+      </div>
+      <div className="info-container">
+
+      </div>
+    </section>
   )
 }
 export default SingleCocktail

@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 
-const Card = ({ id, name, category, img, alcoholic }) => {
+const Card = ({ cocktail }) => {
+  const {idDrink: id, strDrink: name, strCategory: category, strDrinkThumb: img, strAlcoholic:alcoholic} = cocktail;
   return (
     <article className="card">
       <div className="img-container">

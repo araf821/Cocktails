@@ -7,6 +7,21 @@ $secondary-background-color: #d36b00;
 $primary-text-color: #f1efdc;
 $secondary-text-color: #42032c;
 
+@mixin hideTapHighlightColor() {
+  // Prevent highlight colour when element is tapped
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+@mixin hardwareAccel() {
+  // Improve performance on mobile/tablet devices
+  transform: translateZ(0);
+}
+
+@mixin improveAntiAlias() {
+  // Improve aliasing on mobile/tablet devices
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -93,6 +108,18 @@ body {
   margin-top: 5rem;
   background-color: $secondary-background-color;
   border-radius: 0.75rem;
+
+  // display: inline-block;
+  transition-duration: 0.3s;
+  transition-property: transform;
+
+  @include hideTapHighlightColor();
+  @include hardwareAccel();
+  @include improveAntiAlias();
+
+  &:hover {
+    transform: scale(1.02);
+  }
 }
 
 .form-control label {
@@ -162,10 +189,11 @@ body {
   display: grid;
   grid-template-rows: auto 1fr;
   border-radius: 0.25rem;
-  box-shadow: 0 0 11px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s linear;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+  transition: all 0.2s linear;
   &:hover {
-    box-shadow: 0 0 11px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 11px rgba(0, 0, 0, 0);
+    transform: scale(1.03);
   }
 }
 
@@ -235,10 +263,6 @@ body {
   transition: 800ms ease all;
 }
 
-//////////////////////////////////////////////////////////////
-//       Cocktail Page       ////       Cocktail Page       //
-//////////////////////////////////////////////////////////////
-
 ////////////////////////////////////////////////////////
 //       About Page       ////       About Page       //
 ////////////////////////////////////////////////////////
@@ -263,14 +287,14 @@ body {
   .extras {
     text-align: center;
   }
-   
+
   h3 {
     margin-bottom: 1.5rem;
   }
 
   a {
     padding: 1rem 1.5rem;
-    background-color:$secondary-background-color;
+    background-color: $secondary-background-color;
     text-decoration: none;
     position: relative;
     color: $primary-text-color;
@@ -278,7 +302,7 @@ body {
   }
 
   a:hover {
-    color: $secondary-background-color;
+    color: $secondary-text-color;
     background: transparent;
     box-shadow: none;
   }
@@ -288,10 +312,10 @@ body {
     position: absolute;
     top: 0;
     right: 0;
-    height: 2px;
+    height: 3px;
     width: 0;
-    background: $secondary-background-color;
-    transition: all 0.3s ease;
+    background: $secondary-text-color;
+    transition: all 0.45s ease;
   }
   a:after {
     right: inherit;
@@ -304,4 +328,12 @@ body {
     width: 100%;
     transition: all 0.6s ease;
   }
+}
+
+//////////////////////////////////////////////////////////////
+//       Cocktail Page       ////       Cocktail Page       //
+//////////////////////////////////////////////////////////////
+
+.cocktail-page {
+  
 }
