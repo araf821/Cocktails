@@ -10,7 +10,11 @@ const Card = ({ id, name, category, img, alcoholic }) => {
         <h3>{name}</h3>
         <h4>{category}</h4>
         <p>{alcoholic}</p>
-        <Link to={`/cocktail/${id}`} className="cardBtn" >Pick Me</Link>
+        <div className="btn-container">
+          <Link to={`/cocktail/${id}`} className="card-btn">
+            Pick Me
+          </Link>
+        </div>
       </div>
     </article>
   );

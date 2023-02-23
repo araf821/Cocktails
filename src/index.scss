@@ -5,6 +5,7 @@
 $background-color: #e6d2aa;
 $secondary-background-color: #d36b00;
 $primary-text-color: #f1efdc;
+$secondary-text-color: #42032c;
 
 * {
   margin: 0;
@@ -105,6 +106,7 @@ body {
   width: 100%;
   margin-top: 1rem;
   background-color: $primary-text-color;
+  color: $secondary-text-color;
   font-size: 1.25rem;
   border-color: transparent;
   border-radius: 0.5rem;
@@ -112,7 +114,7 @@ body {
 }
 
 //////////////////////////////////////////////////////////////////
-//       Data       ////       Data       ////       Data       //
+//       List       ////       List       ////       List       //
 //////////////////////////////////////////////////////////////////
 
 .cocktails-section {
@@ -124,6 +126,7 @@ body {
   text-align: center;
   letter-spacing: 0.25rem;
   margin-bottom: 3.5rem;
+  color: $secondary-text-color;
 }
 
 .list-section {
@@ -183,5 +186,47 @@ body {
 
 .card-footer p {
   color: rgb(215, 215, 215);
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
+
+.btn-container a {
+  text-decoration: none;
+  background-color: $background-color;
+  color: black;
+  padding: 0.5rem 1rem;
+  position: relative;
+}
+
+.btn-container a:hover {
+  color: $primary-text-color;
+  background: transparent;
+  box-shadow: none;
+}
+.btn-container a:before,
+.btn-container a:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 2px;
+  width: 0;
+  background: $primary-text-color;
+  box-shadow: -1px -1px 5px 0px $background-color, 7px 7px 20px 0px #0003,
+    4px 4px 5px 0px #0002;
+  transition: all 0.3s ease;
+}
+.btn-container a:after {
+  right: inherit;
+  top: inherit;
+  left: 0;
+  bottom: 0;
+}
+.btn-container a:hover:before,
+.btn-container a:hover:after {
+  width: 100%;
+  transition: 800ms ease all;
+}
+
+//////////////////////////////////////////////////////////////
+//       Cocktail Page       ////       Cocktail Page       //
+//////////////////////////////////////////////////////////////
