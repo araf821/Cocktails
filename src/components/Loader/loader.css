@@ -24,17 +24,17 @@
   left: 48px;
 }
 .ldio-z3bn4tlofyn div:nth-child(1) {
-  background: #e90c59;
+  background: #D36B00;
   animation: ldio-z3bn4tlofyn 1s linear infinite;
   animation-delay: -0.5s;
 }
 .ldio-z3bn4tlofyn div:nth-child(2) {
-  background: #46dff0;
+  background: #42032C;
   animation: ldio-z3bn4tlofyn 1s linear infinite;
   animation-delay: 0s;
 }
 .ldio-z3bn4tlofyn div:nth-child(3) {
-  background: #e90c59;
+  background: #D36B00;
   animation: ldio-z3bn4tlofyn-o 1s linear infinite;
   animation-delay: -0.5s;
 }

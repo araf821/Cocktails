@@ -1,6 +1,6 @@
 const About = () => {
   return (
-    <main>
+    <main className="about-section">
       <h1>About Us</h1>
       <p>
         Jelly sweet roll jelly beans biscuit pie macaroon chocolate donut.
@@ -21,6 +21,10 @@ const About = () => {
         venmo vape four loko. Hexagon kale chips typewriter kitsch 8-bit organic
         plaid small batch keffiyeh ethical banh mi narwhal echo park cronut.
       </p>
+      <div className="extras">
+        <h3>Want to generate dummy paragraphs like the above?</h3>
+        <a href="https://lorem-generator123.netlify.app/">Click Me</a>
+      </div>
     </main>
   );
 };

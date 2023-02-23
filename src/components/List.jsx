@@ -1,7 +1,6 @@
-import { useEffect } from "react";
 import { useGlobalContext } from "../context";
 import Card from "./Card";
-import Loading from "./Loading";
+import Loading from "./Loader/Loader";
 
 const List = () => {
   const { data, loading } = useGlobalContext();
