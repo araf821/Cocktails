@@ -3,10 +3,10 @@
 //////////////////////////////////////////////////////
 
 $background-color: #e6d2aa;
-$secondary-background-color: #42032C;
+$secondary-background-color: #42032c;
 
 $primary-text-color: #f1efdc;
-$secondary-text-color: #42032C;
+$secondary-text-color: #42032c;
 
 * {
   margin: 0;
@@ -80,4 +80,34 @@ body {
   &:hover:after {
     transform: scaleX(1);
   }
+}
+
+////////////////////////////////////////////////////////////////////////
+//       Search       ////       Search       ////       Search       //
+////////////////////////////////////////////////////////////////////////
+
+.search-box {
+  padding: 2rem 2.5rem;
+  width: 85vw;
+  max-width: 40rem;
+  margin: 0 auto;
+  margin-top: 2.5rem;
+  background-color: #42032c;
+  border-radius: 0.75rem;
+}
+
+.form-control label {
+  display: inline-block;
+  letter-spacing: 0.25rem;
+  font-weight: bold;
+  color: $primary-text-color;
+}
+
+.form-control input {
+  width: 100%;
+  margin-top: 1rem;
+  background-color: $primary-text-color;
+  border-color: transparent;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
 }
