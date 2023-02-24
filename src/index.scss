@@ -337,6 +337,8 @@ body {
 .cocktail-page {
   text-align: center;
   padding: 5rem;
+  text-transform: capitalize;
+  color: $secondary-text-color;
 
   .drink-container {
     margin: 2rem auto;
@@ -344,6 +346,8 @@ body {
     grid-template-columns: 2fr 3fr;
     gap: 3rem;
     align-items: center;
+    width: 85vw;
+    max-width: 1170px;
   }
 
   h1 {
@@ -351,14 +355,45 @@ body {
   }
 
   img {
-    height: 30rem;
-    border-radius: .5rem;
-    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    display: block;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
   }
 
   .info-container {
     text-align: left;
+    line-height: 2rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding-top: 2rem;
   }
 
-}
+  span {
+    margin-right: 0.5rem;
+    color: $primary-text-color;
+    padding: 0.25rem 0.4rem;
+    background-color: $secondary-background-color;
+    border-radius: 4px;
+  }
 
+  em {
+    font-style: normal;
+  }
+
+  @media screen and (min-width: 990px) {
+    .drink-container {
+      display: grid;
+      grid-template-columns: 2fr 3fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .info-container {
+      padding-top: 0;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+}
