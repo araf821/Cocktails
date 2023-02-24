@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import logo from '../../public/logo.png'
 
 const Navbar = () => {
   return (
@@ -6,7 +7,8 @@ const Navbar = () => {
       <section className="nav-center">
         <Link to="/">
           {/* Placeholder title for now, will be replacing with img */}
-          <h3>Cocktails</h3>
+          {/* <h3>Cocktails</h3> */}
+          <img src={logo} alt="" />
         </Link>
 
         <ul className="nav-links">
