@@ -31,7 +31,6 @@ const AppProvider = ({ children }) => {
     fetchData();
   }, [searchTerm]);
 
-  console.log(data);
   return (
     <AppContext.Provider value={{ data, loading, setSearchTerm }}>
       {children}
