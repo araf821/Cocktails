@@ -1,3 +1,5 @@
 ## Cocktails
 
-A react project making use of TheCocktailDB's API. The main purpose of this project is to get better familiarized with a whole bunch of react concepts and hooks.
+React project made using TheCocktailDB's API of drinks and cocktails. The purpose of this project is to get better familiarized with a bunch of intermediate to advanced level react concepts.
+
+Check out the complete project [HERE](https://cawktails.netlify.app/).
