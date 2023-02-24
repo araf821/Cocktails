@@ -1,3 +1,4 @@
+import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import Loader from "../components/Loader/Loader";
@@ -10,12 +11,12 @@ const SingleCocktail = () => {
   const fetchDrink = async () => {
     setLoading(true);
     try {
-      const response = await fetch(
+      const response = await axios(
         `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`
       )
-      const data = await response.json()
-      console.log("Converted to json");
-      if (data.drinks[0]) {
+      const data = await response.data.drinks
+      console.log(data)
+      if (data) {
         const {
           strDrink: name,
           strCategory: category,
@@ -28,7 +29,7 @@ const SingleCocktail = () => {
           strIngredient3,
           strIngredient4,
           strIngredient5,
-        } = data.drinks[0];
+        } = data[0];
 
         const ingredients = [
           strIngredient1,
@@ -56,13 +57,14 @@ const SingleCocktail = () => {
       console.log("Error!");
       console.log(error);
     }
+    setLoading(false);
+
   };
 
   useEffect(() => {
     setLoading(true);
     console.log("useEffect exe");
     fetchDrink();
-    setLoading(false);
   }, [id]);
 
   if (loading) {

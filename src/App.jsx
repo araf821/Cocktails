@@ -16,7 +16,7 @@ function App() {
         </Route>
 
         <Route path="cocktail" element={<SharedLayout />}>
-          <Route path=":cocktailId" element={<SingleCocktail />} />
+          <Route path=":id" element={<SingleCocktail />} />
         </Route>
 
         <Route path="*" element={<Error />} />
