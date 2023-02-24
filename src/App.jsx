@@ -9,18 +9,13 @@ function App() {
   return (
     <BrowserRouter className="App">
       <Routes>
-        
         <Route path="/" element={<SharedLayout />}>
           <Route index element={<Home />} />
           <Route path="about" element={<About />} />
-        </Route>
-
-        <Route path="cocktail" element={<SharedLayout />}>
-          <Route path=":id" element={<SingleCocktail />} />
+          <Route path="cocktail/:id" element={<SingleCocktail />} />
         </Route>
 
         <Route path="*" element={<Error />} />
-
       </Routes>
     </BrowserRouter>
   );
